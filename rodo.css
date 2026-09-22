@@ -1,0 +1,95 @@
+.brand-hero {
+  height: 499px;
+  padding: 54px 20px 46px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #080808;
+  text-align: center;
+}
+
+.wordmark {
+  color: #c6c6c6;
+  font-family: "GFS Didot", "Times New Roman", serif;
+  font-size: clamp(190px, 25vw, 330px);
+  font-weight: 400;
+  line-height: 0.82;
+  letter-spacing: -0.045em;
+}
+
+.wordmark-subtitle {
+  margin-top: 28px;
+  color: #858585;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: clamp(20px, 3.05vw, 40px);
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.legal-document {
+  width: min(820px, 100%);
+  margin: 0 auto;
+}
+
+.legal-document h2 {
+  margin: 0 0 42px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(36px, 5vw, 60px);
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  font-weight: 600;
+}
+
+.legal-document p,
+.legal-document li {
+  color: #555752;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.legal-document p {
+  margin: 0 0 24px;
+}
+
+.legal-document a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-underline-offset: 4px;
+}
+
+.legal-document ul {
+  margin: 0 0 28px;
+  padding-left: 24px;
+}
+
+.legal-document li {
+  padding-left: 8px;
+}
+
+.legal-document li::marker {
+  color: var(--gold);
+}
+
+@media (max-width: 680px) {
+  .brand-hero {
+    height: 360px;
+    padding: 62px 16px 36px;
+  }
+
+  .wordmark {
+    font-size: clamp(104px, 32vw, 190px);
+  }
+
+  .wordmark-subtitle {
+    margin-top: 18px;
+    font-size: clamp(10px, 3.1vw, 20px);
+  }
+
+  .legal-document h2 {
+    font-size: 38px;
+  }
+}

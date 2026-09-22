@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RODO — Noir Transports</title>
+    <meta
+      name="description"
+      content="Klauzula informacyjna RODO firmy NOIR International Passenger Transport."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Manrope:wght@400;500;600;700&family=Montserrat:wght@400;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="rodo.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="NOIR — strona główna">
+        <span>NOIR</span>
+        <small>Passenger transport</small>
+      </a>
+      <nav class="desktop-nav" aria-label="Główna nawigacja">
+        <a href="index.html#kierunki">Kierunki</a>
+        <a href="noir-member.html">NOIR Member</a>
+        <a href="nowe-uslugi.html">Nowe usługi</a>
+        <a href="polityka-prywatnosci.html">Prywatność</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <a class="header-cta" href="tel:+48607184644">Zadzwoń</a>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Otwórz menu"
+        aria-expanded="false"
+        aria-controls="sidebar"
+      >
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <div class="menu-panel" id="sidebar" aria-hidden="true">
+      <nav aria-label="Menu">
+        <a href="index.html">Strona główna</a>
+        <a href="noir-member.html">Noir Member</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="nowe-uslugi.html">Nowe usługi</a>
+        <a href="polityka-prywatnosci.html">Polityka prywatności</a>
+      </nav>
+      <div class="menu-footer">
+        <a href="mailto:kontakt@noirtransports.com">kontakt@noirtransports.com</a>
+        <a href="tel:+48607184644">+48 607 184 644</a>
+      </div>
+    </div>
+
+    <main>
+      <section class="brand-hero" aria-label="NOIR International Passenger Transport">
+        <div class="wordmark">NOIR</div>
+        <div class="wordmark-subtitle">INTERNATIONAL PASSENGER TRANSPORT</div>
+      </section>
+
+      <section class="legal-section section">
+        <article class="legal-document">
+          <div class="section-label">Klauzula informacyjna</div>
+          <h2>Klauzula informacyjna RODO — NOIR</h2>
+
+          <p>
+            Administratorem Twoich danych osobowych jest NOIR INTERNATIONAL PASSEENGER TRANSPORT
+            ALEKSANDRA STEFANIAK, prowadząca działalność pod nazwą NOIR, NIP: 7671729571, adres:
+            DZIERZĄŻENKO, POD GRUSZĄ 74/1, e-mail:
+            <a href="mailto:kontakt@noirtransports.com">kontakt@noirtransports.com</a>.
+          </p>
+
+          <p>Twoje dane osobowe będą przetwarzane w szczególności w celu:</p>
+          <ul>
+            <li>obsługi zapytania i rezerwacji,</li>
+            <li>organizacji i realizacji przewozu,</li>
+            <li>kontaktu w sprawie przejazdu,</li>
+            <li>obsługi płatności i rozliczeń,</li>
+            <li>realizacji obowiązków prawnych,</li>
+            <li>obsługi reklamacji oraz ewentualnego dochodzenia lub obrony przed roszczeniami.</li>
+          </ul>
+
+          <p>
+            Podanie danych niezbędnych do realizacji rezerwacji jest dobrowolne, jednak ich brak
+            może uniemożliwić wykonanie usługi.
+          </p>
+
+          <p>
+            Przysługuje Ci prawo do dostępu do swoich danych, ich sprostowania, usunięcia,
+            ograniczenia przetwarzania, przenoszenia danych oraz — w przypadkach przewidzianych
+            przepisami — wniesienia sprzeciwu wobec przetwarzania.
+          </p>
+
+          <p>
+            Jeżeli przetwarzanie odbywa się na podstawie zgody, możesz ją wycofać w dowolnym
+            momencie. Wycofanie zgody nie wpływa na zgodność z prawem wcześniejszego przetwarzania.
+          </p>
+
+          <p>Masz również prawo wniesienia skargi do właściwego organu nadzorczego.</p>
+
+          <p>Szczegółowe informacje znajdują się w Polityce Prywatności NOIR.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-top">
+        <a class="brand footer-brand" href="index.html">
+          <span>NOIR</span>
+          <small>Passenger transport</small>
+        </a>
+        <p>Bezpiecznie. Komfortowo.<br />Zawsze w dobrym kierunku.</p>
+        <div class="footer-contact">
+          <a href="tel:+48607184644">+48 607 184 644</a>
+          <a href="mailto:kontakt@noirtransports.com">kontakt@noirtransports.com</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 NOIR International Passenger Transport</span>
+        <div>
+          <a href="polityka-prywatnosci.html">Polityka prywatności</a>
+          <a href="rodo.html" aria-current="page">RODO</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const toggle = document.querySelector(".menu-toggle");
+      const panel = document.querySelector(".menu-panel");
+      const setMenu = (open) => {
+        document.body.classList.toggle("menu-open", open);
+        toggle.setAttribute("aria-expanded", open);
+        toggle.setAttribute("aria-label", open ? "Zamknij menu" : "Otwórz menu");
+        panel.setAttribute("aria-hidden", !open);
+      };
+      toggle.addEventListener("click", () =>
+        setMenu(!document.body.classList.contains("menu-open")),
+      );
+      panel
+        .querySelectorAll("a")
+        .forEach((link) => link.addEventListener("click", () => setMenu(false)));
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") setMenu(false);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,231 @@
+.contact-hero {
+  position: relative;
+  min-height: 680px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: #fff;
+  background: #111;
+}
+
+.contact-hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(5, 6, 6, 0.9) 0%, rgba(5, 6, 6, 0.55) 60%, rgba(5, 6, 6, 0.35)),
+    url("./images/k1.png") center/cover no-repeat;
+  transform: scale(1.02);
+}
+
+.contact-hero-content {
+  position: relative;
+  z-index: 1;
+  width: min(760px, 90%);
+  margin-left: clamp(24px, 10vw, 170px);
+  padding-top: 90px;
+}
+
+.contact-hero h1 {
+  margin: 0 0 28px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(52px, 7vw, 100px);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+  font-weight: 600;
+}
+
+.contact-hero h1 em {
+  color: #cfc9bd;
+  font-weight: 600;
+}
+
+.contact-hero-content > p:last-child {
+  max-width: 540px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(60px, 10vw, 160px);
+  align-items: end;
+}
+
+.contact-intro h2,
+.booking-copy h2,
+.contact-routes h2 {
+  margin: 0 0 28px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(42px, 5vw, 70px);
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+  font-weight: 600;
+}
+
+.contact-intro > p:last-child,
+.booking-copy > p:last-child {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.contact-methods {
+  border-top: 1px solid var(--line);
+}
+
+.contact-method {
+  padding: 32px 18px;
+  border-bottom: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  transition:
+    padding 0.25s,
+    background 0.25s;
+}
+
+.contact-method:hover {
+  padding-left: 24px;
+  padding-right: 24px;
+  background: rgba(183, 151, 99, 0.07);
+}
+
+.contact-method div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-method small {
+  color: var(--muted);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.contact-method strong {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(18px, 2vw, 27px);
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.contact-method > span {
+  color: var(--gold);
+  font-size: 20px;
+}
+
+.booking-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(60px, 10vw, 160px);
+  background: var(--ink-soft);
+  color: #fff;
+}
+
+.booking-copy > p:last-child {
+  color: #969893;
+  max-width: 520px;
+}
+
+.booking-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #393b39;
+}
+
+.booking-steps li {
+  margin-bottom: 10px;
+  padding: 24px 20px;
+  border: 1px solid #393b39;
+  border-radius: var(--radius-sm);
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  align-items: center;
+  gap: 15px;
+}
+
+.booking-steps li > span {
+  color: var(--gold);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+}
+
+.booking-steps div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.booking-steps strong {
+  font-family: "Playfair Display", serif;
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.booking-steps small {
+  color: #7e807c;
+  font-size: 10px;
+}
+
+.contact-routes {
+  text-align: center;
+}
+
+.contact-routes h2 {
+  max-width: 1000px;
+  margin: 0 auto 45px;
+  line-height: 1.25;
+}
+
+.contact-routes h2 span {
+  color: var(--gold);
+}
+
+.contact-routes .button {
+  margin: auto;
+}
+
+@media (max-width: 680px) {
+  .contact-hero {
+    min-height: 600px;
+  }
+
+  .contact-hero-content {
+    margin: 0;
+    padding: 100px 22px 40px;
+  }
+
+  .contact-hero h1 {
+    font-size: 51px;
+  }
+
+  .contact-grid,
+  .booking-section {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .contact-intro h2,
+  .booking-copy h2,
+  .contact-routes h2 {
+    font-size: 41px;
+  }
+
+  .contact-method {
+    padding: 26px 3px;
+  }
+
+  .contact-routes h2 {
+    font-size: 36px;
+  }
+
+  .contact-routes .button {
+    width: 100%;
+  }
+}
